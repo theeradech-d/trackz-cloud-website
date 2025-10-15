@@ -414,7 +414,7 @@ function App() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-1 gap-12">
+                    <div className="grid md:grid-cols-2 gap-12">
                         <div className="bg-white rounded-2xl shadow-lg p-8">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6">
                                 Contact Information
@@ -481,65 +481,35 @@ function App() {
                             </div>
                         </div>
 
-                        {/* <div className="bg-white rounded-2xl shadow-lg p-8">
+                        <div className="bg-white rounded-2xl shadow-lg p-8">
                             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                                Send us a Message
+                                Find Us on the Map
                             </h3>
 
-                            <form className="space-y-4">
-                                <div>
-                                    <label
-                                        htmlFor="name"
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                    >
-                                        Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                                        placeholder="Your name"
-                                    />
-                                </div>
+                            <div className="w-full h-[450px] rounded-lg overflow-hidden">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.5876749999997!2d100.436151!3d13.8572149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e291beff63d9cd%3A0xc3c6046da2cbf07a!2z4Lia4Lij4Li04Lip4Lix4LiXIOC5gOC4reC5h-C4geC4i-C5jOC4l-C4tOC4hOC4quC5jCDguIjguLPguIHguLHguJQ!5e0!3m2!1sen!2sth!4v1634567890123!5m2!1sen!2sth"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
 
-                                <div>
-                                    <label
-                                        htmlFor="email"
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                    >
-                                        Email
-                                    </label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                                        placeholder="your@email.com"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label
-                                        htmlFor="message"
-                                        className="block text-sm font-medium text-gray-700 mb-2"
-                                    >
-                                        Message
-                                    </label>
-                                    <textarea
-                                        id="message"
-                                        rows={4}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"
-                                        placeholder="Tell us about your asset management needs..."
-                                    ></textarea>
-                                </div>
-
-                                <button
-                                    type="submit"
-                                    className="w-full bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-all font-semibold shadow-md hover:shadow-lg"
+                            <div className="mt-6">
+                                <a
+                                    href="https://www.google.com/maps/dir//%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97+%E0%B9%80%E0%B8%AD%E0%B9%87%E0%B8%81%E0%B8%8B%E0%B9%8C%E0%B8%97%E0%B8%B4%E0%B8%84%E0%B8%AA%E0%B9%8C+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94+1%2F93+%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B8%99+%E0%B8%AD%E0%B8%B3%E0%B9%80%E0%B8%A0%E0%B8%AD%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88+%E0%B8%99%E0%B8%99%E0%B8%97%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5+11140/@13.8572149,100.436151,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x30e291beff63d9cd:0xc3c6046da2cbf07a!2m2!1d100.436151!2d13.8572149?entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-all font-semibold shadow-md hover:shadow-lg flex items-center justify-center"
                                 >
-                                    Send Message
-                                </button>
-                            </form>
-                        </div> */}
+                                    <MapPin className="mr-2 w-5 h-5" />
+                                    Get Directions
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
