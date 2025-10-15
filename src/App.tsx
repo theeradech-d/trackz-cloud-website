@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
     Package,
     Shield,
@@ -18,6 +18,38 @@ import demoImage from "./assets/demo.png";
 
 function App() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    useEffect(() => {
+        // Add smooth scrolling behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+
+        // Handle smooth scrolling for anchor links
+        const handleSmoothScroll = (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            const anchor = target.closest('a[href^="#"]');
+            
+            if (anchor) {
+                e.preventDefault();
+                const targetId = anchor.getAttribute('href')?.slice(1);
+                if (targetId) {
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 80; // Account for fixed header
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            }
+        };
+
+        document.addEventListener('click', handleSmoothScroll);
+
+        return () => {
+            document.removeEventListener('click', handleSmoothScroll);
+        };
+    }, []);
 
     const features = [
         {
