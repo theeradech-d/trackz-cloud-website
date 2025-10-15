@@ -10,6 +10,9 @@ import {
     ArrowRight,
     Menu,
     X,
+    MapPin,
+    Phone,
+    Mail,
 } from "lucide-react";
 import demoImage from "./assets/demo.png";
 
@@ -92,6 +95,12 @@ function App() {
                                 className="text-gray-700 hover:text-orange-600 transition-colors font-medium"
                             >
                                 Download
+                            </a>
+                            <a
+                                href="#contact"
+                                className="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+                            >
+                                Contact
                             </a>
                             <a href="https://app.trackz.cloud" target="_blank">
                                 <button className="flex items-center bg-orange-600 text-white px-6 py-2.5 rounded-lg hover:bg-orange-700 transition-all font-semibold shadow-md hover:shadow-lg">
@@ -377,7 +386,7 @@ function App() {
                                 </div>
                                 <div className="flex items-center space-x-2">
                                     <CheckCircle className="w-5 h-5" />
-                                    <span>Works offline with PWA</span>
+                                    <span>Works with PWA</span>
                                 </div>
                                 <div className="flex items-center space-x-2">
                                     <CheckCircle className="w-5 h-5" />
@@ -385,6 +394,152 @@ function App() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Contact Section */}
+            <section
+                id="contact"
+                className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-orange-50"
+            >
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                            Get in Touch
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Have questions about Trackz.cloud? Our team is here
+                            to help you get started
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-1 gap-12">
+                        <div className="bg-white rounded-2xl shadow-lg p-8">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                                Contact Information
+                            </h3>
+
+                            <div className="space-y-6">
+                                <div className="flex items-start space-x-4">
+                                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <MapPin className="w-6 h-6 text-orange-600" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">
+                                            Address
+                                        </h4>
+                                        <p className="text-gray-600 leading-relaxed">
+                                            EXTICS Co.,Ltd.
+                                            <br />
+                                            1/93 Grande Pleno Moo.8
+                                            <br />
+                                            Bang Kruai - Sai Noi Rd
+                                            <br />
+                                            Banglen Bangyai
+                                            <br />
+                                            Nonthaburi 11140
+                                            <br />
+                                            Thailand
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start space-x-4">
+                                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <Phone className="w-6 h-6 text-orange-600" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">
+                                            Phone
+                                        </h4>
+                                        <a
+                                            href="tel:+66634156995"
+                                            className="text-gray-600 hover:text-orange-600 transition-colors"
+                                        >
+                                            (+66) 63 415 699 5
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start space-x-4">
+                                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <Mail className="w-6 h-6 text-orange-600" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-gray-900 mb-2">
+                                            Email
+                                        </h4>
+                                        <a
+                                            href="mailto:mongkon@extics.com"
+                                            className="text-gray-600 hover:text-orange-600 transition-colors"
+                                        >
+                                            mongkon@extics.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* <div className="bg-white rounded-2xl shadow-lg p-8">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                                Send us a Message
+                            </h3>
+
+                            <form className="space-y-4">
+                                <div>
+                                    <label
+                                        htmlFor="name"
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                    >
+                                        Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                                        placeholder="Your name"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label
+                                        htmlFor="email"
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                    >
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                                        placeholder="your@email.com"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label
+                                        htmlFor="message"
+                                        className="block text-sm font-medium text-gray-700 mb-2"
+                                    >
+                                        Message
+                                    </label>
+                                    <textarea
+                                        id="message"
+                                        rows={4}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"
+                                        placeholder="Tell us about your asset management needs..."
+                                    ></textarea>
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    className="w-full bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-all font-semibold shadow-md hover:shadow-lg"
+                                >
+                                    Send Message
+                                </button>
+                            </form>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -445,7 +600,7 @@ function App() {
                         <div>
                             <h3 className="font-semibold mb-4">Support</h3>
                             <ul className="space-y-2 text-sm text-gray-400">
-                                <li>
+                                {/* <li>
                                     <a
                                         href="#"
                                         className="hover:text-orange-500 transition-colors"
@@ -460,13 +615,13 @@ function App() {
                                     >
                                         Help Center
                                     </a>
-                                </li>
+                                </li> */}
                                 <li>
                                     <a
-                                        href="#"
+                                        href="#contact"
                                         className="hover:text-orange-500 transition-colors"
                                     >
-                                        Contact Us
+                                        Contact
                                     </a>
                                 </li>
                             </ul>
